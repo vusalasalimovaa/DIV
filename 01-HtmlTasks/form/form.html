@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='UTF-8'/>
+		<title>Form elements</title>
+	</head>
+	<body>
+		<h1>Form elements</h1>
+		<h2>Daxil olma formu</h2>
+		
+		<form action='login.php' method='POST'>
+			<input name='user' type='text' placeholder='istifadeci adi'/>
+			<input name='pass' type='password' placeholder='parol' />
+			<input type='submit'value='Daxil ol'/>
+		</form>	
+		
+		<h2>Qeydiyyat formu</h2>
+		<form>
+			<p>Ad soyad: <input type='text'/></p>
+			<p>E-mail: <input type='email'/></p>
+			<p>Dogum tarixi: <input type='date'/></p>
+			<fieldset>
+			<legend>Cinsi:</legend> 
+				<label><input type='radio' name='sex' checked='checked'/>Qadin</label>
+				<label><input type='radio' name='sex'/>Kisi</label>
+			</fieldset>
+			<p>Boy: <input type='number' min='100' max='200'/> sm</p>
+			<p>Goz rengi: <input type='color'/> sm</p>
+			<fieldset><legend>Qan qrupu:</legend>
+				<input type='checkbox'/> A
+				<input type='checkbox'/> B
+			</fieldset>
+			<p>Dogum yeri:
+				<select>
+					<option>Azerbaijan</option>
+					<option>Georgia</option>
+					<option>Switzerland</option>
+					<option>Spain</option>
+					<option>Turkey</option>
+				</select>
+			</p>
+			<p>
+				Yasayis yeri:
+				<br />
+				<textarea rows='5' cols='80'></textarea>
+			</p>
+			<p>Cari kefin:
+				pis gunde <input type='range'/> Bomba
+			</p>
+		</form>
+	</body>
+</html>

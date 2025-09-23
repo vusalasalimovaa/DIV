@@ -1,0 +1,15 @@
+h2{
+    color: #113f67;
+    font: italic 2em Arial, Helvetica, sans-serif;  
+}
+
+p{
+    line-height: 1.8;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+span{
+    font-style: normal;
+}

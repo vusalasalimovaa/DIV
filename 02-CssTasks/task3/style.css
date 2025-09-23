@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: cadetblue;
+  color: #f4f4f4;
+}
+
+#header h4 {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+}
+
+#header p {
+  text-transform: capitalize;
+  font-size: 1.2em;
+  font-family: "Montserrat", sans-serif;
+}
+
+#navbar {
+  background: linear-gradient(to bottom, #d5dee7 0%, #e8ebf2 50%, #e2e7ed 100%),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.02) 50%,
+      rgba(255, 255, 255, 0.02) 61%,
+      rgba(0, 0, 0, 0.02) 73%
+    ),
+    linear-gradient(33deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  padding: 20px 0;
+  text-align: center;
+}
+
+#navbar li,
+a {
+  display: inline-block;
+}
+
+#navbar li a {
+  padding: 16px 40px;
+  background-color: rgba(59, 58, 58, 0.582);
+  color: #f4f4f4;
+  border-radius: 8px;
+  border: 2px solid #f4f4f4;
+  transition: 0.3s;
+}
+
+#navbar li a:hover {
+  background-color: transparent;
+  color: black;
+  border-color: black;
+}
+
+#main .photo {
+  /* margin: 20px auto; */
+  margin: 20px 10px 10px auto;
+  /* float: right; */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: cadetblue;
+  transition: 0.9s;
+}
+
+#main .photo img {
+  width: 100%;
+}
+
+/* #main p{
+    clear: both;
+} */
+
+#main .photo:hover {
+  transform: rotate(360deg);
+}
+
+#cards {
+  height: 100vh;
+  background: blueviolet;
+  padding-top: 210px;
+}
+
+#cards .card {
+  width: 320px;
+  border-radius: 20px;
+  background-color: red;
+  overflow: hidden;
+  margin: auto;
+}
+
+#cards .card_img {
+  height: 250px;
+}
+
+#cards .card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#cards .card_content {
+  padding: 20px;
+}
+
+#cards .card_content p {
+  padding: 20px 0;
+  text-align: justify;
+}
+
+#cards .card_content a {
+  display: inline-block;
+  background-color: grey;
+  width: 100%;
+  text-align: center;
+  padding: 16px 0;
+  border-radius: 8px;
+  color: #f4f4f4;
+}
