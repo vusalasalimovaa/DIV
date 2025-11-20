@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="a" />
+            <button onclick="printNums()" style="margin-right: 10px;">Ok</button>
+            <h2 style="display: inline-block;"></h2>
+        </div>
+
+        <div>
+            <input type="text" id="b" />
+            <button onclick="printNums2()" style="margin-right: 10px;">Ok</button>
+            <h3 style="display: inline-block;"></h3>
+        </div>
+
+        <div>
+            <input type="text" id="c" />
+            <input type="text" id="d" />
+            <button onclick="printNums3()" style="margin-right: 10px;">Ok</button>
+            <h4 style="display: inline-block;"></h4>
+        </div> <br>
+
+        <div>
+            <input type="text" id="e" /> 
+            <button onclick="printNums4()" style="margin-right: 10px;">Ok</button> <br> <br>
+            <table border="2" cellspacing="0" cellpadding="8">
+                <tr></tr>
+            </table>
+        </div>
+
+
+        <script>
+            const a = document.getElementById('a');
+            const b = document.getElementById('b');
+            const c = document.getElementById('c');
+            const d = document.getElementById('d');
+            const e = document.getElementById('e');
+            const h2 = document.querySelector('h2');
+            const h3 = document.querySelector('h3');
+            const h4 = document.querySelector('h4');
+            const tr = document.querySelector('tr');
+
+            function printNums() {
+                let str = a.value;
+                for (let i = a.value - 1; i > 0; i--) {
+                    str += ', ' + i
+                }
+                h2.innerHTML = `${str}`
+            }
+
+            function printNums2() {
+                let str = '1';
+                for (let i = +str + +b.value; i <= 100; i += +b.value) {
+                    str += ', ' + i
+                }
+                h3.innerHTML = `${str}`
+            }
+
+            function printNums3() {
+                let str = '1';
+                for (let i = +str + +d.value; i < c.value; i += +d.value ) {
+                    str += ', ' + i
+                }
+                h4.innerHTML = `${str}`
+            }
+
+            function printNums4() {
+                tr.innerHTML = '';
+                for (let i = e.value; i > 0; i--) {
+                    tr.innerHTML += `<td>${i}</td>`
+                }
+            }
+        </script>
+    </body>
+</html>

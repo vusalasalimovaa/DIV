@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        width: 30px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="a" /> /
+    <input type="text" id="b" />
+    <button onclick="res()">=</button>
+    <span id="q"></span>
+
+    <script>
+      const a = document.getElementById("a");
+      const b = document.getElementById("b");
+      const q = document.getElementById("q");
+
+      function res() {
+        let qaliq = a.value % b.value;
+        // let qismet = (a.value-qaliq) / b.value;
+        let qismet = Math.trunc(a.value / b.value);
+        q.innerHTML = `${qismet}, qaliq ${qaliq}`;
+      }
+    </script>
+  </body>
+</html>

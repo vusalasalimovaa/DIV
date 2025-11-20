@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      input {
+        width: 30px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="x" />
+    <select id="op">
+      <option>+</option>
+      <option>-</option>
+      <option>*</option>
+      <option>/</option>
+    </select>
+    <input type="text" id="y" />
+    <button onclick="calc()">=</button>
+    <span id="res"></span>
+
+    <script>
+      const x = document.getElementById("x");
+      const op = document.getElementById('op');
+      const y = document.getElementById("y");
+      const res = document.getElementById("res");
+
+      function calc() {
+        res.innerHTML = eval(x.value + op.value + y.value);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="n" />
+    <button onclick="check()">Ok</button>
+    <h1></h1>
+
+    <script>
+        /*
+        const n = document.getElementById('n');
+        const h1 = document.querySelector('h1');
+        function check() {
+            if (n.value > 0 && n.value % 2 == 0) {
+                h1.innerText = `${n.value} ededi musbet ve cutdur`
+            } else if(n.value > 0 && n.value % 2 == 1) {
+                 h1.innerText = `${n.value} ededi musbet ve tekdir`
+            } else if(n.value < 0 && n.value % 2 == 0) {
+                 h1.innerText = `${n.value} ededi menfi ve cutdur`
+            } else if(n.value < 0 && n.value % 2 == 1) {
+                 h1.innerText = `${n.value} ededi menfi ve tekdir`
+            } else{
+                h1.innerText = 'Eded sifirdir'
+            }
+        }*/
+
+        const n = document.getElementById('n');
+        const h1 = document.querySelector('h1');
+
+        function check() {
+            if (n.value == 0) h1.innerHTML = 'Sifir'
+            else {
+                let sign = (n.value > 0) ? 'mustbet' : 'menfi';
+                let even = (n.value % 2) ? 'tek' : 'cut';
+
+                h1.innerHTML = `${sign} ve ${even}`
+            }
+        }
+    </script>
+</body>
+</html>

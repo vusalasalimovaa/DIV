@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        display: table;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="show('alma')">Alma</button>
+    <button onclick="show('Mandarin')">Mandarin</button>
+    <button onclick="show('pomegranate')">Nar</button>
+    <img src="img/alma.png" alt="meyve" id="img" />
+
+    <script>
+      const img = document.getElementById("img");
+
+      function show(image) {
+        img.src = `img/${image}.png`;
+      }
+
+      /*
+        function showAlma(){
+            img.src = 'img/alma.png'
+        }
+
+        function showNar(){
+            img.src = 'img/pomegranate.png'
+        }
+
+        function showMandarin(){
+            img.src = 'img/Mandarin.png'
+        }
+        */
+    </script>
+  </body>
+</html>

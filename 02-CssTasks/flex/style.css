@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a{
+    color: #000;
+}
+
+header{
+    padding: 20px;
+    background-color: aquamarine;
+}
+
+.header_top, .social-medias{
+    display: flex;
+    gap: 15px;
+}
+
+.container{
+    max-width: 1180px;
+    margin: auto;
+}
+
+.top, .bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top{
+    margin-bottom: 15px;
+}
+
+menu{
+    display: flex;
+    gap: 15px;
+}
+
+section{
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    gap: 10px;
+}
+
+.card{
+    width: 300px;
+}
+
+.card img{
+    width: 100%;
+}

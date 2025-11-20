@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const div = document.querySelector('div')
+        const orders = [
+        { id: 1, total: 40, status: "completed" },
+        { id: 2, total: 10, status: "pending" },
+        { id: 3, total: 50, status: "completed" },
+        { id: 3, total: 80, status: "pending" },
+        { id: 3, total: 20, status: "completed" },
+        { id: 3, total: 700, status: "pending" },
+      ];
+
+      div.innerHTML = orders
+      .filter(item => item.status == 'completed')
+      .map(item => item.total)
+      .reduce((acc,item) => acc+= item,0)
+
+    </script>
+</body>
+</html>

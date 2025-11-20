@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="" id="n" onchange="vur()"></select>
+    <div id="cedvel"></div>
+
+    <script>
+      const n = document.getElementById('n');
+      const cedvel = document.getElementById("cedvel");
+
+
+      for (let i = 2; i <= 9; i++) {
+        n.innerHTML += `<option>${i}</option>`;
+      }
+
+      function vur() {
+        let kod = "";
+        for (let i = 0; i <= 10; i++) {
+          kod += `${n.value} x ${i} = ${n.value * i} <br/>`;
+        }
+        cedvel.innerHTML = kod;
+      }
+    </script>
+  </body>
+</html>

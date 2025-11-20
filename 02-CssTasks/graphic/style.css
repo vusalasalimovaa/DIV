@@ -1,0 +1,29 @@
+#btn { text-align: center; }
+
+#btn button{
+    padding: 10px 30px;
+    border: 1px solid red;
+    background: orange;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1.2em;
+}
+
+#btn button:hover{
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgb(180, 96, 96);
+}
+
+#click{
+    background: skyblue;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+#click:hover + #susam {
+    display: block;
+}
+
+#susam{
+    display: none;
+}

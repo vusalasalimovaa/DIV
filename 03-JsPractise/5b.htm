@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { text-align: center; margin-top: 100px;}
+    </style>
+</head>
+<body>
+    <label for="">Telebenin adi</label>
+    <input type="text" id="ad" /> <br/> <br/>
+    <label for="">Telebenin qiymeti</label>
+    <input type="text" id="bal" /> <br/> <br/>
+    <button onclick="calc()">Qiymeti hesabla</button>
+    <p></p>
+
+    <script>
+
+        const ad = document.getElementById('ad');
+        const bal = document.getElementById('bal');
+        const p = document.querySelector('p')
+
+        function calc() {
+
+            if (bal.value < 0) {
+                alert('Menfi eded daxil edile bilmez')
+            } else {
+                if (bal.value <= 50) {
+                    p.innerText = `Hormetli ${ad.value}, siz F qiymeti aldiniz. Kesildiniz `
+                } else if (bal.value >= 51 && bal.value <= 60){
+                    p.innerText = `Hormetli ${ad.value}, siz E qiymeti aldiniz. `
+                } else if (bal.value >= 61 && bal.value <= 70){
+                    p.innerText = `Hormetli ${ad.value}, siz D qiymeti aldiniz. `
+                } else if (bal.value >= 71 && bal.value <= 80){
+                    p.innerText = `Hormetli ${ad.value}, siz C qiymeti aldiniz. `
+                } else if (bal.value >= 81 && bal.value <= 90){
+                    p.innerText = `Hormetli ${ad.value}, siz B qiymeti aldiniz. `
+                } else if (bal.value >= 91 && bal.value <= 100){
+                    p.innerText = `Hormetli ${ad.value}, siz A qiymeti aldiniz. Mukemmelsiz `
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+    <body>
+        <select id="year"></select>
+        <script>
+            const year = document.getElementById('year');
+
+            for(let i = new Date().getFullYear(); i >= 1905; i--) {
+                year.innerHTML += `<option>${i}</option>`
+            }
+        </script>
+    </body>
+</html>

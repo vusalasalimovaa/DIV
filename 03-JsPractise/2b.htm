@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      input {
+        width: 30px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="a" /> +
+    <input type="text" id="b" />
+    <button onclick="sum()">=</button>
+    <span id="c"></span>
+
+    <script>
+      let a = document.getElementById("a");
+      let b = document.getElementById("b");
+      let c = document.getElementById("c");
+
+      function sum() {
+        c.innerText = Number(a.value) + Number(b.value);
+
+        a.value = "";
+        b.value = "";
+      }
+    </script>
+  </body>
+</html>

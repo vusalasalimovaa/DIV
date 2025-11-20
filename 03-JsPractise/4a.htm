@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="n" />
+    <button onclick="check()">Ok</button>
+    <h1></h1>
+
+    <script>
+      const n = document.getElementById("n");
+      const h1 = document.querySelector("h1");
+
+      function check() {
+        h1.innerText = n.value % 2 ? 'Say tekdir' : 'Say cutdur'; 
+        
+        /*
+        if (n.value % 2 == 1) h1.innerText = 'Say tekdir'; 
+        else h1.innerText = 'Say cutdur';
+        */
+      }
+    </script>
+  </body>
+</html>

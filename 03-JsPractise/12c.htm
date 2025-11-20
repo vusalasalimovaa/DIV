@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let cem = 0;
+        let newArr = [];
+
+        const arr = [15, 49, "string", 3, 6, 62, "array", 12, 9, -4, "number", 58, 103]
+        console.log('Bütün dəyişənləri ekrana yazdırın');
+        arr.forEach(item => console.log(item))
+
+        console.log('Bütün sayları toplayın və ekrana yazdırın');
+        arr.forEach(item => {
+            if (typeof item == 'number'){
+                cem += item
+            }
+        })
+        console.log(cem);
+
+        console.log('Bütün stringləri tapın, böyük hərfə çevirin və yeni array yaradın');
+        
+        arr.forEach(item => {
+            if(typeof item == 'string'){
+                newArr.push(item.toUpperCase())
+            }
+        })
+
+        console.log(newArr);
+
+        console.log('Bütün müsbət ədədləri tapın və ekrana yazdırın');
+
+        arr.forEach(item => {
+            if(item > 0){
+                console.log(item);
+            }
+        })
+
+        console.log('Array-i tərsinə çevirin (reverse istifadə etmədən)');
+
+        let end = arr.length - 1
+        arr.forEach((item,index) => {
+            console.log(arr[end--]);
+        })    
+        
+        console.log('Bütün cüt ədədləri ekrana yazdırın');
+        
+        arr.forEach(item => {
+            if(item % 2 == 0 && item > 0){
+                console.log(item);
+            }
+        })
+
+        console.log('Bütün stringlərin uzunluğunu tapın və "string-length" şəklində ekrana yazdırın');
+
+        arr.forEach(item => {
+            if(typeof item == 'string'){
+                console.log('string-length - ' + item + " " + item.length);
+            }
+        })
+
+        console.log('Bütün rəqəmləri iki ilə vurun və ekrana yazdırın');
+
+        arr.forEach(item => {
+            if(typeof item == 'number'){
+                console.log(item * 2);
+            }
+        })
+
+
+    </script>
+</body>
+</html>

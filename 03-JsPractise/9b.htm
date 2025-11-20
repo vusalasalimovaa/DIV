@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="check()">Ok</button>
+    <h2></h2>
+
+    <script>
+      const h2 = document.querySelector("h2");
+
+      function check() {
+        let str = '1';
+        let cem = 1;
+        for (let i = 2; i <= 7; i++) {
+            str += ' + ' + i;
+            cem += i;
+        }
+
+        h2.innerHTML = `${str} = ${cem}`
+
+      }
+    </script>
+</body>
+</html>

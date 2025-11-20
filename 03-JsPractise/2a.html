@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Adin nedir?" id="ad" />
+    <button onclick="salamVer()">Ok</button>
+    <h1 id="h1"></h1>
+    
+    <script>
+        function salamVer(){
+           let ad =  document.getElementById('ad');
+           let h1 = document.getElementById('h1');
+           h1.innerHTML = `Salam, <i>${ad.value}</i>`
+        }
+    </script>
+</body>
+</html>

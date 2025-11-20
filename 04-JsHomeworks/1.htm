@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        text-align: center;
+      }
+      input {
+        width: 280px;
+        padding: 12px 14px;
+        font-size: 1.2em;
+        border: 1.5px solid #d0d7de;
+        border-radius: 10px;
+        outline: none;
+        transition: 0.2s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+      }
+      input:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        transform: translateY(-1px);
+      }
+      button {
+        color: #fff;
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="name1" />
+      <button onclick="switchNames()"><==></button>
+      <input type="text" id="name2" />
+    </div>
+
+    <hr>
+
+    <div>
+      <input type="text" id="num1" />
+      <input type="text" id="num2" />
+      <input type="text" id="num3" />
+      <button onclick="calc()"> = </button>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      let name1 = document.getElementById("name1");
+      let name2 = document.getElementById("name2");
+      let num1 = document.getElementById("num1");
+      let num2 = document.getElementById("num2");
+      let num3 = document.getElementById("num3");
+      let result = document.getElementById('result');
+
+
+
+      function switchNames() {
+        let empty = name1.value;
+        name1.value = name2.value;
+        name2.value = empty;
+      }
+
+      function calc() {
+        result.innerHTML = `Cemi : ${+num1.value + +num2.value + +num3.value} <br/>
+                            Ort: ${(+num1.value + +num2.value + +num3.value) / 3} <br/>
+                            Hasil: ${+num1.value * +num2.value * +num3.value}`
+      }
+    </script>
+  </body>
+</html>

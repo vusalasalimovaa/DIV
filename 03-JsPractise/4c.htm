@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ad" placeholder="Adiniz nedir?"/>
+    <fieldset>
+        <label for=""><input type="radio" name="sex" id="f">Qadin</label>
+        <label for=""><input type="radio" name="sex" id="m" checked='checked'>Kisi</label>
+    </fieldset>
+    <button onclick="show()">Ok</button>
+    <h1></h1>
+
+    <script>
+        const ad = document.getElementById('ad');
+        const f = document.getElementById('f');
+        const m = document.getElementById('m');
+        const h1 = document.querySelector('h1');
+
+        function show() {
+
+            let saat = new Date().getHours();
+            let mesaj = (saat < 6 ) ? "Gecen xeyre qalsin" :
+                        (saat < 12) ? "Sabahin xeyir" :
+                        (saat < 18) ? "Hey vaxtin xeyir" : 'Axsamin xeyir'
+
+            let xitab = m.checked ? 'bey' : 'xanim'
+
+            if (saat < 6 ) mesaj = 'Gecen xeyre qalsin'
+            else if (saat < 18) mesaj = 'Sabahin xeyir'
+            else if (saat < 18) mesaj = 'Her vaxtin xeyir'
+            else mesaj = 'Axsamin xeyir'
+
+            h1.innerHTML = `${mesaj}, ${ad.value} ${xitab}`
+        }
+
+        // Gecen xeyre qalsin 6 Sabahin xeyir 12 Her vaxtin xeyir 18 Axsamin xeyir 24 
+    </script>
+</body>
+</html>

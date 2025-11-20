@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arr = [34,2,6,3,12,9,65,39,47,103,81];
+        let maxEded = arr[0];
+        let minEded = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if(maxEded < arr[i]){
+                maxEded = arr[i]
+            }else if( minEded > arr[i]){
+                minEded = arr[i]
+            }
+            
+        }
+
+        console.log(maxEded);
+        console.log(minEded);
+    </script>
+</body>
+</html>

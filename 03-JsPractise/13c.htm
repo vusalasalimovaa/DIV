@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let newArr = [];
+      const users = [
+        { name: "Ali", active: true, scores: [10, 15, 20] },
+        { name: "Leyla", active: false, scores: [20, 30, 40] },
+        { name: "Murad", active: true, scores: [5, 10, 15] },
+      ];
+
+      let newUsers = users
+      .filter(item => item.active == true)
+      .map(item => {
+        const avg = item.scores.reduce((acc,item) => acc+=item,0)/item.scores.length
+        return {name:item.name, avg:avg }
+      })
+
+      console.log(newUsers);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+nav{
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    padding: 20px 0;
+}
+
+.container{
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+menu ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+menu ul li{cursor: pointer;}

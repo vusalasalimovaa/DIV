@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ display: flex; height: 100vh; }
+        #slider { width: 80vw; height: 80vh; margin: auto; box-shadow: 0 0 10px #333; display: flex; align-items: center; justify-content: space-between; transition: .5s;}
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <button onclick="change(-1)">◀</button>
+        <button onclick="change(1)">▶</button>
+    </div>
+
+    <script>
+        const slider = document.getElementById('slider');
+        let x = 0;
+
+        let timer = setTimeout(change, 0, 0)
+
+        function change(dir){
+            clearTimeout(timer)
+            x += dir
+            if (x<0) x = 8
+            if (x>8) x = 0
+            slider.style.background = `url('img/${x}.jpg') center/cover`
+            timer = setTimeout(change, 3000, 1)
+        }
+
+        /*
+        function next(){
+            if(x < 8) x++
+            else x = 0
+            show()
+        }
+
+        function prev(){
+            if(x > 0) x--
+            else x = 8
+            show()
+        } */
+
+        /*
+        function show(){
+            slider.style.background = `url('img/${x}.jpg') center/cover`
+        }*/
+    </script>
+</body>
+</html>

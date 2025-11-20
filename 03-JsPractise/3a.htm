@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { box-sizing: border-box; user-select: none; }
+        body{ margin: 0; height: 100vh; display: flex; }
+        #calculator{ margin: auto; box-shadow: 0 0 10px #333; border-radius: 10px; padding: 30px; background: #f9f9f9; }
+        button, input { width: 50px; height: 40px; margin: 5px; box-shadow: 1px 1px #333; border: 1px solid #333; border-radius: 5px; }
+        button:active { box-shadow: 0 0 3px #333;}
+        #display{ width: 240px; box-shadow: 1px 1px #333 inset; padding: 0 20px; text-align: right; outline: none; }
+        #equal { width: 115px; background: orange; }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div><input type="text" id="display" /></div>
+        <div>
+            <button onclick="reset()">C</button>
+            <button>⇦</button>
+            <button onclick="show('**')">^</button>
+            <button onclick="show('/')">÷</button>
+        </div>
+        <div>
+            <button onclick="show('7')">7</button>
+            <button onclick="show('8')">8</button>
+            <button onclick="show('9')">9</button>
+            <button onclick="show('*')">✖</button>
+        </div>
+        <div>
+            <button onclick="show('4')">4</button>
+            <button onclick="show('5')">5</button>
+            <button onclick="show('6')">6</button>
+            <button onclick="show('-')">-</button>
+        </div>
+        <div>
+            <button onclick="show('1')">1</button>
+            <button onclick="show('2')">2</button>
+            <button onclick="show('3')">3</button>
+            <button onclick="show('+')">+</button>
+        </div>
+        <div>
+            <button onclick="show('0')">0</button>
+            <button onclick="show('.')">.</button>
+            <button id="equal" onclick="equal()">=</button>
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+
+        function show(x) {
+            display.value += x;
+        }
+
+        function equal() {
+            display.value = eval(display.value);
+        }
+
+        function reset() {
+            display.value = "";
+        }
+    </script>
+</body>
+</html>

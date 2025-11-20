@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        let div = document.querySelector('div')
+        const users = [
+        { name: "Eltun", age: 21 },
+        { name: "Emin", age: 22 },
+        { name: "Mehemmed", age: 22 },
+        { name: "Saide", age: 22 },
+        { name: "Sahib", age: 25 },
+        { name: "Sahnaz", age: 22 },
+        { name: "Serafet", age: 24 },
+        { name: "Madina", age: 28 },
+        { name: "Musa", age: 29 },
+        { name: "Vahid", age: 50 },
+        ];
+
+        const render = () => {
+        div.innerHTML = users.filter(item => item.age >25).map(item => {
+            return `<div>
+                <p>Yaş : ${item.age}</p>
+                </div>`;
+        }).join("")
+      };
+
+      render()
+
+
+    </script>
+</body>
+</html>

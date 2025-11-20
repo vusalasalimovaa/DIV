@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        table { border-collapse: collapse; }
+        td { width: 80px; height: 80px; border: 1px solid #333; text-align: center; font-size: 1.5em; }
+    </style>
+</head>
+<body>
+    <table id="cdv"></table>
+
+    <script>
+        const cdv = document.getElementById('cdv');
+        let kod = '';
+        let x = 1
+        for (let i = 1; i <= 5; i++) {
+            kod += '<tr>'
+            for (let j = 1; j <= 5; j++) {
+                x = j % 2 ? j : ''
+                kod += `<td>${x}</td>`
+            }
+            kod += '<tr/>'
+        }
+        cdv.innerHTML = kod
+    </script>
+</body>
+</html>
+</body>
+</html>

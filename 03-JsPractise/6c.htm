@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="pul"/>
+    <select id="valyuta">
+        <option>USD</option>
+        <option>TL</option>
+        <option>RUB</option>
+    </select>
+    <button onclick="change()">Convert</button>
+    <p></p>
+
+    <script>
+        const pul = document.getElementById('pul');
+        const valyuta = document.getElementById('valyuta');
+        const p = document.querySelector('p');
+
+        function change(){
+            if (valyuta.value == 'USD') p.innerText = pul.value * 0.59 + " USD"
+            else if (valyuta.value == 'TL') p.innerText = pul.value * 24.68 + " TL"
+            else if (valyuta.value == 'RUB') p.innerText = pul.value * 47.63 + " RUB"
+            console.log(valyuta.value);
+        }
+
+    </script>
+</body>
+</html>

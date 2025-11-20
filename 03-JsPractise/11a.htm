@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100%;
+            height: 50px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="check()" class="box1"></div>
+    <div onclick="check()" class="box2"></div>
+    <div onclick="check()" class="box3"></div>
+    <select>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+    </select>
+
+    <script>
+        const box1 = document.querySelector('.box1');
+        const box2 = document.querySelector('.box2');
+        const box3 = document.querySelector('.box3');
+        const slc = document.querySelector('select');
+
+        function check(){
+            if (slc.value == 'red'){
+                box1.style.backgroundColor = 'red';
+                box2.style.backgroundColor = 'red';
+                box3.style.backgroundColor = 'red';
+            }
+
+            else if (slc.value == 'green'){
+                box1.style.backgroundColor = 'green'
+                box2.style.backgroundColor = 'green'
+                box3.style.backgroundColor = 'green'
+            }
+        }
+    </script>
+</body>
+</html>

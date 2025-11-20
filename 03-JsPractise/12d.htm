@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="demo"></div>
+    <button onclick="sortAZ()">Sort A-Z</button>
+    <button onclick="sortZA()">Sort Z-A</button>
+    <button onclick="baki()">Baki</button>
+    <button onclick="rvs()">Reverse</button>
+    <button onclick="fnd()">20</button>
+    <button onclick="ttl()">Total</button>
+
+    <h1></h1>
+
+    <script>
+      const data = [
+        { id: 1, name: "Kenan", age: 20, city: "Baki" },
+        { id: 2, name: "Nigar", age: 25, city: "Gəncə" },
+        { id: 3, name: "Murad", age: 30, city: "Sumqayıt" },
+        { id: 4, name: "Aysel", age: 22, city: "Baki" },
+      ];
+
+      let demo = document.getElementById("demo");
+      let h1 = document.querySelector("h1");
+
+      const render = (list) => {
+        demo.innerHTML = list.map((item) => {
+          return `<div>
+                <h3>Ad :${item.name}</h3>
+                <p>Yaş : ${item.age}</p>
+                <p>Seher : ${item.city}</p>
+                </div>`;
+        }).join("");
+      };
+
+      render(data);
+
+      function sortAZ() {
+        const sortAz =  data.sort((a,b) => a.age - b.age);
+         render(sortAz)
+      }
+
+      function sortZA() {
+        const sortZA =  data.sort((a,b) => b.age - a.age);
+         render(sortZA)
+      }
+
+      function baki() {
+        const newData =  data.filter(item => item.city === 'Baki');
+        render(newData)
+      }
+
+      function rvs() {
+        const newData =  data.reverse();
+        render(newData)
+      }
+
+      function fnd() {
+        const newData =  data.find(item => item.age == 20);
+        render([newData])
+      }
+
+      function ttl() {
+        const newData =  data.reduce((acc,item) => acc += item.age,0);
+        h1.innerHTML = newData
+      }
+
+
+
+    </script>
+  </body>
+</html>
