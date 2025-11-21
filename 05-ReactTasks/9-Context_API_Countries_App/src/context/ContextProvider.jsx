@@ -10,6 +10,12 @@ const ContextProvider = ({ children }) => {
   const region = [...new Set(countries.map((item) => item.region))];
   // console.log(region);
 
+  const [search, setSearch] = useState("");
+
+  const filteredData = countries.filter((item) =>
+    item.name.common.toLowerCase().startsWith(search.toLowerCase())
+  );
+
   useEffect(() => {
     axios(
       "https://restcountries.com/v3.1/all?fields=name,capital,flags,region,population,languages,borders,maps,unMember,cca3"
@@ -25,7 +31,9 @@ const ContextProvider = ({ children }) => {
 
   return (
     <div>
-      <Context.Provider value={{ countries, loading, region }}>
+      <Context.Provider
+        value={{ countries, loading, region, search, setSearch, filteredData }}
+      >
         {children}
       </Context.Provider>
     </div>

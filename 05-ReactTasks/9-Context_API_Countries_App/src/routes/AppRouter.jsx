@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Filter from "../components/Filter";
 import { Context } from "../context/ContextProvider";
 import Sefihe from "../pages/Sefihe";
+import Footer from "../components/Footer";
 
 const AppRouter = () => {
   const { loading, countries, region } = useContext(Context);
@@ -23,6 +24,7 @@ const AppRouter = () => {
           );
         })}
       </Routes>
+      <Footer />
     </div>
   );
 };

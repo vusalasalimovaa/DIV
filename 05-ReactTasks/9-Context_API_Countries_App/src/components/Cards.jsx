@@ -6,13 +6,13 @@ import { useNavigate } from "react-router-dom";
 import Card from "./Card";
 
 const Cards = () => {
-  const { countries } = useContext(Context);
+  const { countries,filteredData } = useContext(Context);
   // const { regions } = useContext(Context);
   // console.log(countries);
 
   return (
     <div className="cards">
-      {countries.map((item) => {
+      {filteredData.map((item) => {
         return (
           <div className="card" key={crypto.randomUUID()}>
             <Card item={item} />
